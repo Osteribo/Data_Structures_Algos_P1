@@ -32,16 +32,12 @@ for x in calls:
 
 for i in unique_list:
     time_per_number[i]=0
-    #print(i)
     for x in calls:
-       # print(x)
         ## checks both phone numbers and adds up total time
         if x[0] == i or x[1] == i:
-            #print(x[0])
             curret_time = time_per_number[i]
             total_time = int(x[3]) + int(curret_time)
             time_per_number[i] = total_time
-            print('Total time for ' + str(i) + ' is ' + str(time_per_number[i]))
 
 
 ## find the highest value in the dictionary

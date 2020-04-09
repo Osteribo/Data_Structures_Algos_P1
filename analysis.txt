@@ -1,0 +1,4 @@
+Analysis of efficiency programs created
+
+Task0.py: O(1)
+Task1.py: O(n+n^2) multiple loop in loop

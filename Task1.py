@@ -23,6 +23,13 @@ unique_list = []
 for x in calls:
     if x[0] not in unique_list:
         unique_list.append(x[0])
+    if x[1] not in unique_list:
+        unique_list.append(x[1])
+for x in texts:
+    if x[0] not in unique_list:
+        unique_list.append(x[0])
+    if x[1] not in unique_list:
+        unique_list.append(x[1])
 
 num_unique = len(unique_list)
 

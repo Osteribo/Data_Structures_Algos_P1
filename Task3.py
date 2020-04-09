@@ -54,7 +54,7 @@ area_code_called = []
 bang_calls = 0
 for x in calls:
   if x[0][:5] == area_code:
-    if x[1][:1] == '(':
+    if x[1][:2] == '(0':
       #remove brackets
       a = x[1].split(")")
       a = a[0].split("(")
@@ -62,11 +62,11 @@ for x in calls:
       if a[1] == '080':
         bang_calls += 1
       area_code_called.append(a[1])
-    #add toll free numbers
+    #add telemarketer numbers
     elif x[1][:3] == '140':
       area_code_called.append(x[1][:3])
     #add mobile numbers
-    elif x[1][6] == ' ':
+    elif x[1][5] == ' ' and (x[1][0] == "7" or "8" or "9"):
       area_code_called.append(x[1][:4])
     # add number to a list for tracking
     num_called.append(x[1])
@@ -84,6 +84,3 @@ for x in no_dupe_area_code:
 ## percentage of (080) to (080) calls
 percentage_bang_bang = bang_calls/len(num_called)
 print(str(format(percentage_bang_bang, '.2f')) + " percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
-
-
-
