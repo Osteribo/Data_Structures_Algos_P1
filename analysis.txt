@@ -2,6 +2,6 @@ Analysis of efficiency programs created
 
 Task0.py: O(1)
 Task1.py: O(n+n^2) multiple loop in loop
-Task2.py: O(n+2n^2) multiple quadratic loops and one regular loop
-Task3.py: O(n)
-Task4.py:
+Task2.py: O(n+n^2) multiple quadratic loops and one regular loop
+Task3.py: O(n) multiple loops without any internal loops
+Task4.py: O(n^4) multiple loops with multiple internal loops
