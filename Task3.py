@@ -82,5 +82,5 @@ for x in no_dupe_area_code:
 
 
 ## percentage of (080) to (080) calls
-percentage_bang_bang = bang_calls/len(num_called)
+percentage_bang_bang = (bang_calls/len(num_called)) * 100
 print(str(format(percentage_bang_bang, '.2f')) + " percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")

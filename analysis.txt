@@ -1,7 +1,11 @@
 Analysis of efficiency programs created
 
-Task0.py: O(1)
-Task1.py: O(n+n^2) multiple loop in loop
-Task2.py: O(n+n^2) multiple quadratic loops and one regular loop
-Task3.py: O(n) multiple loops without any internal loops
-Task4.py: O(n^4) multiple loops with multiple internal loops
+Task0.py: O(1): no functions to cause time complexing. Just print statments O(1) and string interpolation O(1). 
+
+Task1.py: O(n^2): for loops O(n) with 2 nested "not in" O(n+n) python function giving O(n^2)
+
+Task2.py: O(n^2): for loop O(n) with nested "not in" function O(n^2). for loop O(n) with nested for loop O(n), O(n^2). for loop O(n) with if statement O(n).
+
+Task3.py: O(n log(n)):  There are 2 "for" loops which are O(n). the first loop contains "if" statments which are O(1) including the nested if statments. the second "for" loop has a print function which is O(1). The time complexing piece is the .sort() function which has a time complexity of O(nlogn).
+
+Task4.py: O(n^2): for loop O(n) with 2 "not in" functions O(2n) nested O(n^2). another loop with the same O(n^2). for loop O(n) with nested 3 "not in" O(3n) statements O(3n^2). 
